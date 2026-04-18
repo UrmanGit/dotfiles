@@ -8,6 +8,7 @@ precmd() { echo -ne '\e[3 q'; }
 alias ls='eza'
 alias se='sudoedit'
 alias dots='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias fastfetch='clear && fastfetch'
 
 # Yazi z cwd
 function y() {

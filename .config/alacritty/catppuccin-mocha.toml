@@ -37,24 +37,24 @@ text = "#1e1e2e"
 background = "#f5e0dc"
 
 [colors.normal]
-black = "#45475a"
-red = "#f38ba8"
-green = "#a6e3a1"
-yellow = "#f9e2af"
-blue = "#89b4fa"
-magenta = "#f5c2e7"
-cyan = "#94e2d5"
-white = "#bac2de"
+black = "#1e1e2e" # surface1 -> base
+red = "#f38ba8" # red
+green = "#a6e3a1" # green
+yellow = "#fab387" # yellow -> peach
+blue = "#89b4fa" # blue
+magenta = "#cba6f7" # pink -> mauve
+cyan = "#74c7ec" # teal -> sapphire
+white = "#bac2de" # subtext 1
 
 [colors.bright]
-black = "#585b70"
-red = "#f38ba8"
-green = "#a6e3a1"
-yellow = "#f9e2af"
-blue = "#89b4fa"
-magenta = "#f5c2e7"
-cyan = "#94e2d5"
-white = "#a6adc8"
+black = "#585b70" # surface1
+red = "#eba0ac" # maroon
+green = "#94e2d5" # teal
+yellow = "#f9e2af" # yellow
+blue = "#b4befe" # lavender
+magenta = "#f5c2e7" # pink
+cyan = "#89dceb" # sky
+white = "#cdd6f4" # subtext 0
 
 [[colors.indexed_colors]]
 index = 16
