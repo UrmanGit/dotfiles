@@ -1,0 +1,40 @@
+font=JetBrains Mono Nerd Font
+format=<b>%a ⏵</b> %s\n%b
+sort=-time
+output=DP-3
+layer=overlay
+anchor=top-center
+background-color=#1e1e2e
+margin=5,10,5,5
+padding=0,5,10
+border-size=2
+border-color=#cba6f7
+border-radius=10
+icons=0
+max-icon-size=64
+default-timeout=5000
+ignore-timeout=1
+
+[urgency=normal]
+border-color=#cba6f7
+
+[urgency=high]
+border-color=#f38ba8
+default-timeout=0
+
+[summary~="log-.*"]
+border-color=#a6e3a1
+
+[app-name=lightcord summary~="(.*(^| )orz|ORZ|sto|STO|otl|OTL( |$).*)"]
+invisible=1
+
+[app-name="mic-toggle"]
+anchor=top-right
+width=120
+height=30
+margin=8
+padding=4,8
+border-size=1
+font=JetBrains Mono Nerd Font 10
+default-timeout=1000
+format=%s\n%b

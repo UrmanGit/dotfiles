@@ -1,0 +1,102 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "height": 50,
+    "margin": "9 32 0 32",
+
+    "reload_style_on_change": true,
+
+
+    "modules-left": [ 
+        "hyprland/workspaces",
+        "custom/separator",
+        "wlr/taskbar",
+        "custom/note"
+    ],
+
+    "hyprland/workspaces": {
+        "workspace-taskbar": {
+            "enable": true,
+            "update-active-window": true
+        }
+    },
+
+    "custom/separator": {
+        "exec": "printf ' '",
+        "interval": 3600,
+        "format": "{output}"
+    },
+   
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 20,
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "tooltip-format": "{title}"
+    },
+
+    "modules-center": [
+        "hyprland/window"
+    ],
+
+    "hyprland/window": {
+        "format": "{title}",
+        "icon": true
+    },
+
+    "modules-right": [
+        "clock",
+        "idle_inhibitor",
+        "tray",
+        "network",
+        "pulseaudio"
+    ],
+
+    "clock": {
+        "format": " {:%H:%M}",
+        "tooltip-format": "The cake is a lie",
+        "timezone": "Europe/Warsaw"
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+
+
+    "tray": {
+        "spacing": 15
+    },
+
+    "network": {
+        "format-wifi": "  | {essid}",
+        "format-ethernet": "  | {ipaddr}",
+        "format-disconnected": "  | Disconnected",
+        "tooltip-format-wifi": "Signal: {signalStrength}% | IP: {ipaddr}",
+        "tooltip-format-ethernet": "IP: {ipaddr}"
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}%{icon} | {format_source}",
+        "format-bluetooth": "{volume}%{icon} | {format_source}",
+        "format-bluetooth-muted": " {icon} | {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": " ",
+        "format-icons": {
+            "headphone": "  ",
+            "hands-free": "  ",
+            "headset": "  ",
+            "phone": "  ",
+            "portable": "  ",
+            "car": "  ",
+            "default": [" ", "  ", "  "]
+        },
+        "on-click": "pavucontrol"
+    }
+    
+}

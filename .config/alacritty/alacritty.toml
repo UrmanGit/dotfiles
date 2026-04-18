@@ -1,0 +1,31 @@
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+dynamic_padding = true
+decorations = "None"
+opacity = 0.8
+blur = true
+dynamic_title = false
+
+[font]
+normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
+bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
+italic = { family = "JetBrains Mono Nerd Font", style = "Italic" }
+bold_italic = { family = "JetBrains Mono Nerd Font", style = "BoldItalic" }
+size = 13
+
+[cursor]
+style = { shape = "Underline", blinking = "On" }
+
+[terminal]
+shell = "/usr/bin/zsh"
+
+[mouse]
+hide_when_typing = true
