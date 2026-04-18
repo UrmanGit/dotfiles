@@ -39,6 +39,9 @@ export BAT_THEME="Catppuccin Mocha"
 # Pulse
 export PULSE_COOKIE="$XDG_STATE_HOME/pulse/cookie"
 
+# starship
+export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+
 # $PATH of pain
 export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
