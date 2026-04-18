@@ -27,6 +27,12 @@ export CARGO_HOME="$XDG_DATA_HOME/cargo"
 # Zoxide
 _ZO_DATA_DIR="$XDG_CONFIG_HOME/zoxide"
 
+# Ollama
+export OLLAMA_HOME="$XDG_STATE_HOME/ollama"
+
+# Nvidia
+export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
+
 # $PATH of pain
 export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"

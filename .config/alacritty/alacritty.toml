@@ -15,11 +15,10 @@ blur = true
 dynamic_title = false
 
 [font]
-normal = { family = "JetBrains Mono Nerd Font", style = "Regular" }
-bold = { family = "JetBrains Mono Nerd Font", style = "Bold" }
-italic = { family = "JetBrains Mono Nerd Font", style = "Italic" }
-bold_italic = { family = "JetBrains Mono Nerd Font", style = "BoldItalic" }
-size = 13
+normal = { family = "JetBrainsMono Nerd Font Mono", style = "Regular" }
+bold   = { family = "JetBrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetBrainsMono Nerd Font Mono", style = "Italic" }
+size   = 13.0
 
 [font.offset]
 x = 0
