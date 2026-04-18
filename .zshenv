@@ -41,6 +41,7 @@ export PULSE_COOKIE="$XDG_STATE_HOME/pulse/cookie"
 
 # starship
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
+export STARSHIP_CACHE="$XDG_CACHE_HOME/starship/"
 
 # $PATH of pain
 export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
