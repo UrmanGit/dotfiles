@@ -18,3 +18,8 @@ function y() {
 	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
 	rm -f -- "$tmp"
 }
+
+# Env
+if [[ $TERM == "xterm-256color" ]]; then
+    export BAT_PAGING='never'
+fi

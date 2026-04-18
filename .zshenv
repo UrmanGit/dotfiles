@@ -33,6 +33,12 @@ export OLLAMA_HOME="$XDG_STATE_HOME/ollama"
 # Nvidia
 export __GL_SHADER_DISK_CACHE_PATH="$XDG_CACHE_HOME/nv"
 
+# Bat
+export BAT_THEME="Catppuccin Mocha"
+
+# Pulse
+export PULSE_COOKIE="$XDG_STATE_HOME/pulse/cookie"
+
 # $PATH of pain
 export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"

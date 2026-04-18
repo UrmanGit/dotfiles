@@ -1,0 +1,31 @@
+[mgr]
+ratio = [1, 4, 3]
+sort_by = "alphabetical"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+sort_translit = false
+linemode = "size"
+show_hidden = true
+scrolloff = 5
+title_format = ""
+
+[preview]
+wrap = "yes"
+tab_size = 4
+cache_dir = "/home/wojtek/.cache/yazi/"
+image_delay = 100
+
+[opener]
+play = [
+	{ run = "mpv %s", orphan = true, for = "unix" },
+]
+edit = [
+	{ run = "$EDITOR %s", block = true, for = "unix" },
+]
+open = [
+	{ run = "xdg-open %s1", desc = "Open" },
+]
+
+[input]
+cursor_blink = true
