@@ -20,7 +20,7 @@ size   = 13.0
 
 [font.offset]
 x = 0
-y = -2
+y = -2 
 
 [cursor]
 style = { shape = "Underline", blinking = "On" }
