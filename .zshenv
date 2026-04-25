@@ -43,7 +43,11 @@ export PULSE_COOKIE="$XDG_STATE_HOME/pulse/cookie"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship/starship.toml"
 export STARSHIP_CACHE="$XDG_CACHE_HOME/starship/"
 
+# Fake openai api Fake
+export OPENAI_API_KEY="LIGMA_BALLS"
+
 # $PATH of pain
 export PATH="$XDG_DATA_HOME/npm/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$CARGO_HOME/bin:$PATH"
+export PATH="$HOME/.lmstudio/bin:$PATH"
