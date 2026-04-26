@@ -8,4 +8,7 @@ require("config.linebreak")
 
 vim.opt.laststatus = 3
 
+-- Kolumna po lewej żeby żarówka nie migała
+vim.opt.signcolumn = "yes"
+
 vim.cmd.colorscheme("catppuccin-mocha")
