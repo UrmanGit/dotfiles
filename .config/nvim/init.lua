@@ -1,10 +1,10 @@
+-- Lazy <3
 require("config.lazy")
 
 require("config.keymaps")
 require("config.4-space-indent")
 require("config.lines")
-require("config.smoothscroll")
-require("config.commands")
+require("config.linebreak")
 
 vim.opt.laststatus = 3
 
