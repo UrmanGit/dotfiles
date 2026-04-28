@@ -4,9 +4,6 @@ import = [
 ]
 live_config_reload = true
 
-[env]
-TERM = "xterm-256color"
-
 [window]
 dynamic_padding = true
 decorations = "None"
