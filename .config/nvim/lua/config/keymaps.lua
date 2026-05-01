@@ -9,10 +9,10 @@ map("n", "<leader>fg", "<Cmd>Telescope live_grep<CR>", opts)
 map("n", "<leader>t", "<Cmd>Neotree filesystem toggle left<CR>", opts)
 map("n", "<leader>e", "<Cmd>Neotree filesystem focus left<CR>", opts)
 map(
-    "n",
-    "<leader>[]",
-    "<Cmd>set tabstop=2 shiftwidth=2 noexpandtab<CR><Cmd>retab!<CR><Cmd>set tabstop=4 shiftwidth=4 expandtab<CR><Cmd>retab!<CR>",
-    opts
+	"n",
+	"<leader>[]",
+	"<Cmd>set tabstop=2 shiftwidth=2 noexpandtab<CR><Cmd>retab!<CR><Cmd>set tabstop=4 shiftwidth=4 expandtab<CR><Cmd>retab!<CR>",
+	opts
 )
 
 -- NvimLSP
@@ -23,11 +23,3 @@ map("n", "<leader>se", vim.diagnostic.open_float, opts)
 
 -- None ls
 map("n", "<leader>gf", vim.lsp.buf.format, opts)
-
--- Lazy
-map("n", "<S-s>", "<Cmd>Lazy sync<CR>", opts)
-
--- Minuet Ai
-map("i", "<C-y", function ()
-    require("minuet").complete()
-end, opts)

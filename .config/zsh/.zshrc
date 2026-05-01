@@ -1,6 +1,9 @@
 # Starship
 eval "$(starship init zsh)"
 
+# Brak vi w terminalu
+bindkey -e
+
 # Kursor wraca jako migające _
 precmd() { echo -ne '\e[3 q'; }
 
