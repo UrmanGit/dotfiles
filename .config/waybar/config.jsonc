@@ -45,12 +45,36 @@
     },
 
     "modules-right": [
+        "privacy",
         "clock",
         "idle_inhibitor",
         "tray",
         "network",
         "pulseaudio"
     ],
+
+    "privacy": {
+        "icon-spacing": 10,
+        "icon-size": 15,
+        "transition-duration": 100,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 15
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 15
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 15
+            }
+        ]
+    },
 
     "clock": {
         "format": " {:%H:%M}",
