@@ -1,11 +1,13 @@
 # Starship
 eval "$(starship init zsh)"
 
-# Brak vi w terminalu
-bindkey -e
-
 # Kursor wraca jako migające _
 precmd() { echo -ne '\e[3 q'; }
+
+# Vi keybindy
+bindkey -v
+
+export KEYTIMEOUT=1
 
 # Aliasy
 alias ls='eza'
