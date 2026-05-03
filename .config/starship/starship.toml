@@ -1,115 +1,52 @@
 # Główne rzeczy
 "$schema" = 'https://starship.rs/config-schema.json'
 add_newline = false
+scan_timeout = 100
 palette = 'catppuccin_mocha'
-    
-# Prompt
-# format = """
-# $username\
-# $hostname\
-# $localip\
-# $shlvl\
-# $singularity\
-# $kubernetes\
-# $nats\
-# $directory\
-# $vcsh\
-# $fossil_branch\
-# $fossil_metrics\
-# $git_branch\
-# $git_commit\
-# $git_state\
-# $git_metrics\
-# $git_status\
-# $hg_branch\
-# $hg_state\
-# $pijul_channel\
-# $docker_context\
-# $package\
-# $bun\
-# $c\
-# $cmake\
-# $cobol\
-# $cpp\
-# $daml\
-# $dart\
-# $deno\
-# $dotnet\
-# $elixir\
-# $elm\
-# $erlang\
-# $fennel\
-# $fortran\
-# $gleam\
-# $golang\
-# $gradle\
-# $haskell\
-# $haxe\
-# $helm\
-# $java\
-# $julia\
-# $kotlin\
-# $lua\
-# $maven\
-# $mojo\
-# $nim\
-# $nodejs\
-# $ocaml\
-# $odin\
-# $opa\
-# $perl\
-# $php\
-# $pulumi\
-# $purescript\
-# $python\
-# $quarto\
-# $raku\
-# $rlang\
-# $red\
-# $ruby\
-# $rust\
-# $scala\
-# $solidity\
-# $swift\
-# $terraform\
-# $typst\
-# $vlang\
-# $vagrant\
-# $xmake\
-# $zig\
-# $buf\
-# $guix_shell\
-# $nix_shell\
-# $conda\
-# $pixi\
-# $meson\
-# $spack\
-# $memory_usage\
-# $aws\
-# $gcloud\
-# $openstack\
-# $azure\
-# $direnv\
-# $env_var\
-# $mise\
-# $crystal\
-# $custom\
-# $sudo\
-# $cmd_duration\
-# $line_break\
-# $jobs\
-# $battery\
-# $time\
-# $status\
-# $container\
-# $netns\
-# $os\
-# $shell\
-# $character"""
 
-format = "[$all](bg:surface2)$line_break$character"
+format = """[╭─](fg:overlay1)[█](#232334)[█](#282839)[█](#2D2D3F)[█](surface0)\
+$os[〉](bold fg:overlay0 bg:surface0)\
+[$directory](bg:surface0)\
+[$all](bg:surface0)[]\
+(fg:surface0)$line_break\
+[╰─](fg:overlay0) $character"""
 
-# Symbole
+[palettes.catppuccin_mocha]
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
+
+[character]
+format = '$symbol'
+success_symbol = ''
+error_symbol = ''
+
+[os]
+disabled = false
+
 [aws]
 symbol = " "
 
@@ -117,14 +54,14 @@ symbol = " "
 symbol = " "
 
 [battery]
-full_symbol = "󰁹 "
-charging_symbol = "󰂄 "
-discharging_symbol = "󰂃 "
-unknown_symbol = "󰂑 "
-empty_symbol = "󰂎 "
+full_symbol = "󰁹"
+charging_symbol = "󰂄"
+discharging_symbol = "󰂃"
+unknown_symbol = "󰂑"
+empty_symbol = "󰂎"
 
 [buf]
-symbol = " "
+symbol = ""
 
 [bun]
 symbol = " "
@@ -160,7 +97,12 @@ symbol = " "
 symbol = " "
 
 [directory]
-read_only = " 󰌾"
+format = '[$read_only]($read_only_style)[$path]($style) '
+style = 'bold blue bg:surface0'
+read_only = "󰌾 "
+read_only_style = 'maroon bg:surface0'
+truncation_symbol = '…/'
+home_symbol = '  ~'
 
 [docker_context]
 symbol = " "
@@ -169,7 +111,7 @@ symbol = " "
 symbol = " "
 
 [elixir]
-symbol = " "
+symbol = ""
 
 [elm]
 symbol = " "
@@ -194,12 +136,20 @@ symbol = " "
 
 [git_branch]
 symbol = " "
+style = 'bold purple bg:surface0'
+truncation_symbol = '…'
 
 [git_commit]
-tag_symbol = '  '
+tag_symbol = ' '
+
+[git_state]
+style = 'bold yellow bg:surface0'
+
+[git_status]
+style = 'bold red bg:surface0'
 
 [golang]
-symbol = " "
+symbol = ""
 
 [gradle]
 symbol = " "
@@ -214,7 +164,7 @@ symbol = " "
 symbol = " "
 
 [helm]
-symbol = " "
+symbol = ""
 
 [hg_branch]
 symbol = " "
@@ -223,7 +173,7 @@ symbol = " "
 ssh_symbol = " "
 
 [java]
-symbol = " "
+symbol = ""
 
 [julia]
 symbol = " "
@@ -238,7 +188,7 @@ symbol = "󱃾 "
 symbol = " "
 
 [maven]
-symbol = " "
+symbol = ""
 
 [memory_usage]
 symbol = "󰍛 "
@@ -247,7 +197,7 @@ symbol = "󰍛 "
 symbol = "󰔷 "
 
 [mojo]
-symbol = "󰈸 "
+symbol = "󰈸"
 
 [nats]
 symbol = " "
@@ -262,82 +212,83 @@ symbol = " "
 symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = ""
 
 [ocaml]
 symbol = " "
 
 [odin]
-symbol = "󰟢 "
+symbol = "󰟢"
 
 [opa]
 symbol = " "
 
 [openstack]
-symbol = " "
+symbol = ""
 
 [os.symbols]
-AIX = " "
-AlmaLinux = " "
-Alpaquita = " "
-Alpine = " "
-ALTLinux = " "
-Amazon = " "
-Android = " "
-AOSC = " "
-Arch = " "
-Artix = " "
-Bluefin = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Elementary = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = " "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = " "
-InstantOS = " "
-Ios = "󰀷 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = " "
-OpenCloudOS = " "
-openEuler = " "
-openSUSE = " "
-OracleLinux = "󰺡 "
-PikaOS = " "
-Pop = " "
-Raspbian = " "
-Redhat = "󱄛 "
-RedHatEnterprise = "󱄛 "
-Redox = "󰀘 "
-RockyLinux = " "
-Solus = " "
-SUSE = " "
-Ubuntu = " "
-Ultramarine = " "
-Unknown = " "
-Uos = " "
-Void = " "
-Windows = "󰍲 "
-Zorin = " "
+AIX = "[](bg:surface0)"
+AlmaLinux = "[ ](bg:surface0)"
+Alpaquita = "[ ](bg:surface0)"
+Alpine = "[ ](bg:surface0)"
+ALTLinux = "[ ](bg:surface0)"
+Amazon = "[ ](bg:surface0)"
+Android = "[ ](bg:surface0)"
+AOSC = "[ ](bg:surface0)"
+Arch = "[ ](bg:surface0 fg:sapphire)"
+Artix = "[ ](bg:surface0)"
+Bluefin = "[ ](bg:surface0)"
+CachyOS = "[ ](bg:surface0)"
+CentOS = "[ ](bg:surface0)"
+Debian = "[ ](bg:surface0)"
+DragonFly = "[ ](bg:surface0)"
+Elementary = "[ ](bg:surface0)"
+Emscripten = "[ ](bg:surface0)"
+EndeavourOS = "[ ](bg:surface0)"
+Fedora = "[ ](bg:surface0)"
+FreeBSD = "[ ](bg:surface0)"
+Garuda = "[ ](bg:surface0)"
+Gentoo = "[ ](bg:surface0)"
+HardenedBSD = "[󰞌](bg:surface0)"
+Illumos = "[ ](bg:surface0)"
+InstantOS = "[ ](bg:surface0)"
+Ios = "[󰀷 ](bg:surface0)"
+Kali = "[ ](bg:surface0)"
+Linux = "[ ](bg:surface0)"
+Mabox = "[ ](bg:surface0)"
+Macos = "[ ](bg:surface0)"
+Manjaro = "[ ](bg:surface0)"
+Mariner = "[ ](bg:surface0)"
+MidnightBSD = "[](bg:surface0)"
+Mint = "[ ](bg:surface0)"
+NetBSD = "[ ](bg:surface0)"
+NixOS = "[ ](bg:surface0)"
+Nobara = "[ ](bg:surface0)"
+OpenBSD = "[ ](bg:surface0)"
+OpenCloudOS = "[ ](bg:surface0)"
+openEuler = "[ ](bg:surface0)"
+openSUSE = "[ ](bg:surface0)"
+OracleLinux = "[󰺡 ](bg:surface0)"
+PikaOS = "[ ](bg:surface0)"
+Pop = "[ ](bg:surface0)"
+Raspbian = "[ ](bg:surface0)"
+Redhat = "[󱄛 ](bg:surface0)"
+RedHatEnterprise = "[󱄛 ](bg:surface0)"
+Redox = "[󰀘 ](bg:surface0)"
+RockyLinux = "[ ](bg:surface0)"
+Solus = "[ ](bg:surface0)"
+SUSE = "[ ](bg:surface0)"
+Ubuntu = "[ ](bg:surface0)"
+Ultramarine = "[ ](bg:surface0)"
+Unknown = "[](bg:surface0)"
+Uos = "[ ](bg:surface0)"
+Void = "[ ](bg:surface0)"
+Windows = "[󰍲 ](bg:surface0)"
+Zorin = "[ ](bg:surface0)"
 
 [package]
 symbol = "󰏗 "
+style = 'bold peach bg:surface0'
 
 [perl]
 symbol = " "
@@ -359,24 +310,26 @@ symbol = " "
 
 [python]
 symbol = " "
+style = 'bold yellow bg:surface0'
 
 [raku]
 symbol = "󱖊 "
 
 [red]
-symbol = "󱍼 "
+symbol = "󱍼"
 
 [rlang]
 symbol = "󰟔 "
 
 [ruby]
-symbol = " "
+symbol = ""
 
 [rust]
 symbol = "󱘗 "
+style = 'bold red bg:surface0'
 
 [scala]
-symbol = " "
+symbol = ""
 
 [shlvl]
 symbol = "󰹍 "
@@ -385,7 +338,7 @@ symbol = "󰹍 "
 symbol = " "
 
 [solidity]
-symbol = " "
+symbol = ""
 
 [spack]
 symbol = " "
@@ -406,7 +359,7 @@ symbol = " "
 symbol = " "
 
 [typst]
-symbol = " "
+symbol = ""
 
 [vagrant]
 symbol = " "
@@ -416,31 +369,3 @@ symbol = " "
 
 [zig]
 symbol = " "
-
-[palettes.catppuccin_mocha]
-rosewater = "#f5e0dc"
-flamingo = "#f2cdcd"
-pink = "#f5c2e7"
-mauve = "#cba6f7"
-red = "#f38ba8"
-maroon = "#eba0ac"
-peach = "#fab387"
-yellow = "#f9e2af"
-green = "#a6e3a1"
-teal = "#94e2d5"
-sky = "#89dceb"
-sapphire = "#74c7ec"
-blue = "#89b4fa"
-lavender = "#b4befe"
-text = "#cdd6f4"
-subtext1 = "#bac2de"
-subtext0 = "#a6adc8"
-overlay2 = "#9399b2"
-overlay1 = "#7f849c"
-overlay0 = "#6c7086"
-surface2 = "#585b70"
-surface1 = "#45475a"
-surface0 = "#313244"
-base = "#1e1e2e"
-mantle = "#181825"
-crust = "#11111b"
