@@ -44,6 +44,9 @@ format = '$symbol'
 success_symbol = ''
 error_symbol = ''
 
+[cmd_duration]
+style = 'bold yellow bg:surface0'
+
 [os]
 disabled = false
 
