@@ -23,9 +23,14 @@ set -x STARSHIP_CONFIG "$XDG_CONFIG_HOME/starship/starship.toml"
 set -x STARSHIP_CACHE "$XDG_CACHE_HOME/starship/"
 set -x BAT_PAGING 'never'
 
+if status is-login
+    uwsm start hyprland-uwsm.desktop
+end
+
 if status is-interactive
     # Starship
     starship init fish | source
+    enable_transience
 
     # Aliasy
     alias ls eza
